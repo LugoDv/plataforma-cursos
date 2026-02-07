@@ -1,0 +1,26 @@
+{
+  "name": "2526-daw2-bloc2-a20-lugodv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./assets/css/style.css -o ./assets/css/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ILERNA-BCN/2526-daw2-bloc2-a20-LugoDv.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ILERNA-BCN/2526-daw2-bloc2-a20-LugoDv/issues"
+  },
+  "homepage": "https://github.com/ILERNA-BCN/2526-daw2-bloc2-a20-LugoDv#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "daisyui": "^5.5.14",
+    "tailwindcss": "^4.1.18"
+  }
+}

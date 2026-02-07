@@ -1,0 +1,91 @@
+@import url("https://cdn.jsdelivr.net/npm/@fontsource/archivo-black/index.css");
+@import url("https://cdn.jsdelivr.net/npm/@fontsource-variable/plus-jakarta-sans/index.css");
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes:
+    nord --default,
+    night --prefersdark;
+}
+
+@theme {
+  /* titulares*/
+  --font-display: "Archivo Black", sans-serif;
+
+  /* Fuente para el App (Profesional y lectura) */
+  --font-sans: "Plus Jakarta Sans Variable", ui-sans-serif, system-ui;
+
+  /* --- Sombras Neo-Brutalistas (Sutiles pero sólidas) --- */
+  --shadow-neo-sm: 3px 3px 0px 0px rgba(0, 0, 0, 1);
+  --shadow-neo: 5px 5px 0px 0px rgba(0, 0, 0, 1);
+  --shadow-neo-lg: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+
+  /* --- Ajustes de Bordes --- */
+  --border-width-3: 2.5px;
+}
+
+@layer base {
+  /* Forzamos bordes globales en elementos estructurales */
+  aside,
+  .navbar {
+    @apply border-black;
+    border-width: var(--border-width-3);
+  }
+
+  /* Reset para cards para asegurar que tomen el fondo de Nord */
+  .card {
+    @apply bg-base-100 border-black;
+    border-width: 2px; /* Según tu preferencia de 2px para cards */
+    box-shadow: var(--shadow-neo);
+  }
+}
+
+@layer components {
+  .btn {
+    @apply border-black transition-all duration-150;
+
+    border-width: var(--border-width-3) !important;
+    box-shadow: var(--shadow-neo-sm) !important;
+  }
+
+  .btn:hover {
+    @apply translate-y-[2px] translate-x-[1px];
+    box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 1) !important;
+  }
+
+  .btn:active {
+    @apply translate-y-[3px] translate-x-[2px];
+    box-shadow: none !important;
+  }
+
+  /* Animación flotante para elementos del hero */
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  /* Sombra brutal para círculo principal */
+  .shadow-neo-brutal {
+    box-shadow: 12px 12px 0px 0px rgba(0, 0, 0, 1);
+  }
+
+  .shadow-neo-md {
+    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+  }
+}
