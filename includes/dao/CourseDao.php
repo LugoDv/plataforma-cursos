@@ -33,6 +33,18 @@ class CourseDao
     return $courses;
   }
 
+  public function getAllCoursesByStatus($status = 'published')
+  {
+    $stmt = $this->db->prepare("SELECT courses.*, users.username as teacher_name FROM courses LEFT JOIN users ON courses.teacher_id = users.id WHERE courses.status  = :status ORDER BY courses.id DESC");
+    $stmt->bindValue(':status', $status, SQLITE3_TEXT);
+    $result = $stmt->execute();
+    $courses = [];
+    while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+      $courses[] = $row;
+    }
+    return $courses;
+  }
+
   public function getAllCourses()
   {
     $result = $this->db->query('SELECT courses.*, users.username as teacher_name FROM courses LEFT JOIN users ON courses.teacher_id = users.id ORDER BY courses.id DESC');

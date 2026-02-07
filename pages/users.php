@@ -87,14 +87,16 @@ $rolStyles = [
                       </div>
                     </td>
                     <td class="border-b-2 border-black">
-                      <div class="flex justify-center gap-2">
-                        <button onclick="updateUser('<?= $user['id'] ?>','<?= $user['username'] ?>','<?= $user['email'] ?>','<?= $user['role'] ?>','<?= $user['profile_picture'] ?>')" class="btn btn-square btn-xs border-2 border-black shadow-neo-sm hover:bg-info rounded-none" title="Editar">
-                          <i data-lucide="pencil" class="size-3"></i>
-                        </button>
-                        <button class="btn btn-square btn-xs border-2 border-black shadow-neo-sm btn-error rounded-none" onclick="confirmDeleteUser('<?= $user['id'] ?>', '<?= $user['email'] ?>')" title="Borrar">
-                          <i data-lucide="trash-2" class="size-3"></i>
-                        </button>
-                      </div>
+                      <?php if ($user['role'] !== 'admin'): ?>
+                        <div class="flex justify-center gap-2">
+                          <button onclick="updateUser('<?= $user['id'] ?>','<?= $user['username'] ?>','<?= $user['email'] ?>','<?= $user['role'] ?>','<?= $user['profile_picture'] ?>')" class="btn btn-square btn-xs border-2 border-black shadow-neo-sm hover:bg-info rounded-none" title="Editar">
+                            <i data-lucide="pencil" class="size-3"></i>
+                          </button>
+                          <button class="btn btn-square btn-xs border-2 border-black shadow-neo-sm btn-error rounded-none" onclick="confirmDeleteUser('<?= $user['id'] ?>', '<?= $user['email'] ?>')" title="Borrar">
+                            <i data-lucide="trash-2" class="size-3"></i>
+                          </button>
+                        </div>
+                      <?php endif; ?>
                     </td>
                   </tr>
                 <?php endforeach; ?>

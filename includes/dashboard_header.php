@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo isset($page_title) ? $page_title . ' - ' . SITE_NAME : SITE_NAME; ?></title>
   <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/output.css">
+  <link rel="icon" type="image/png" href="<?php echo BASE_URL; ?>assets/img/logo.png" />
 </head>
 
 <body>
@@ -88,12 +89,12 @@
                   </a>
                 </li>
 
-                <li>
+                <!-- <li>
                   <a href="<?= BASE_URL ?>pages/settings.php" class="gap-2">
                     <i data-lucide="settings" class="size-4"></i>
                     Configuración
                   </a>
-                </li>
+                </li> -->
                 <div class="divider my-1"></div>
                 <li>
                   <a href="<?= BASE_URL ?>procedures/logout.proc.php" class="text-error gap-2">

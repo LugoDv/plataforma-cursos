@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/output.css">
   <title><?php echo isset($page_title) ? $page_title . ' - Lugo tech' : 'Lugo tech - Cursos online'; ?></title>
+  <link rel="icon" type="image/png" href="<?php echo BASE_URL; ?>assets/img/logo.png" />
 
 </head>
 
@@ -26,35 +27,26 @@
           </label>
           <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow-lg bg-base-100 rounded-box w-52 gap-1">
             <li>
-              <details>
-                <summary class="font-display font-semibold">
-                  <i data-lucide="home" class="size-4"></i>
-                  Inicio
-                </summary>
-                <ul class="p-2 bg-base-200 rounded-box">
-                  <li><a href="<?= BASE_URL ?>index.php">Inicio Personal</a></li>
-                  <li><a href="<?= BASE_URL ?>pages/company.php">Inicio Empresa</a></li>
-                </ul>
-              </details>
+
+              <a href="<?= BASE_URL ?>index.php" class="font-display font-semibold">
+                <i data-lucide="home" class="size-4"></i>
+                Inicio
+              </a>
+
             </li>
             <li>
-              <details>
-                <summary class="font-display font-semibold">
-                  <i data-lucide="book" class="size-4"></i>
-                  Cursos
-                </summary>
-                <ul class="p-2 bg-base-200 rounded-box">
-                  <li><a href="<?= BASE_URL ?>pages/articles.php">Artículos Personales</a></li>
-                  <li><a href="<?= BASE_URL ?>pages/company-articles.php">Artículos Corporativos</a></li>
-                </ul>
-              </details>
+              <a href="<?= BASE_URL ?>pages/coursesPublic.php" class="font-display font-semibold">
+                <i data-lucide="book" class="size-4"></i>
+                Cursos
+              </a>
+
             </li>
 
             <?php if (isset($_SESSION['user'])): ?>
               <li>
-                <a href="<?= BASE_URL ?>pages/about.php">
+                <a href="<?= BASE_URL ?>pages/studentCourses.php" class="font-display font-semibold">
                   <i data-lucide="graduation-cap" class="size-4"></i>
-                  Mi Aprendizaje
+                  Mi aprendizaje
                 </a>
               </li>
             <?php endif; ?>
@@ -64,8 +56,8 @@
         <!-- Logo -->
         <a href="<?= BASE_URL ?>index.php" class="flex items-center normal-case gap-2 px-2 lg:px-4 ">
           <div class="avatar">
-            <div class="w-8 h-8 rounded-full bg-warning/20 flex items-center justify-center">
-              <img src="<?php echo BASE_URL; ?>assets/images/logo.png" alt="Logo Springfield News" class="object-contain" />
+            <div class="w-8 h-8 bg-primary border-3 border-black flex items-center justify-center shadow-neo-sm">
+              <img src="<?= BASE_URL ?>assets/img/logo.png" alt="">
             </div>
           </div>
           <div class="flex flex-col items-start">
@@ -86,16 +78,11 @@
           </li>
 
           <li>
-            <details>
-              <summary class="font-display font-semibold hover:text-primary transition-colors">
-                <i data-lucide="book" class="size-4"></i>
-                Cursos
-              </summary>
-              <ul class="p-2 bg-base-100 shadow-lg rounded-box w-52 z-10">
-                <li><a href="<?= BASE_URL ?>pages/articles.php" class="">Artículos Personales</a></li>
-                <li><a href="<?= BASE_URL ?>pages/company-articles.php" class="">Artículos Corporativos</a></li>
-              </ul>
-            </details>
+            <a href="<?= BASE_URL ?>pages/coursesPublic.php" class="font-display font-semibold hover:text-primary transition-colors">
+              <i data-lucide="book" class="size-4"></i>
+              Cursos
+            </a>
+
           </li>
 
           <?php if (isset($_SESSION['user'])): ?>
@@ -154,12 +141,7 @@
                   </a>
                 </li>
               <?php endif; ?>
-              <li>
-                <a href="<?= BASE_URL ?>pages/settings.php" class="gap-2">
-                  <i data-lucide="settings" class="size-4"></i>
-                  Configuración
-                </a>
-              </li>
+
               <div class="divider my-1"></div>
               <li>
                 <a href="<?= BASE_URL ?>procedures/logout.proc.php" class="text-error gap-2">

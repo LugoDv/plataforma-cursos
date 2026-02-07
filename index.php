@@ -5,7 +5,7 @@ require_once 'includes/dao/CourseDao.php';
 require_once 'includes/connectDB.php';
 
 $courseDao = new CourseDao($db);
-$courseBackend = $courseDao->getCoursesByCategory('backend')?? [];
+$courseBackend = $courseDao->getCoursesByCategory('backend') ?? [];
 $courseFrontend = $courseDao->getCoursesByCategory('frontend') ?? [];
 
 
@@ -97,7 +97,7 @@ $courseFrontend = $courseDao->getCoursesByCategory('frontend') ?? [];
   <section class="space-y-6">
     <div class="flex items-center justify-between">
       <h3 class="font-display italic font-black text-2xl lg:text-3xl  ">Frontend</h3>
-      <a href="#" class="btn btn-sm btn-ghost border-2 border-black rounded-none shadow-neo-sm">Ver todos <i data-lucide="arrow-right"></i></a>
+      <a href="<?= BASE_URL ?>pages/coursesPublic.php" class="btn btn-sm btn-ghost border-2 border-black rounded-none shadow-neo-sm">Ver todos <i data-lucide="arrow-right"></i></a>
     </div>
 
     <div class="carousel carousel-center w-full space-x-4 p-4 bg-base-200 rounded-none border-3 border-black">
@@ -148,7 +148,7 @@ $courseFrontend = $courseDao->getCoursesByCategory('frontend') ?? [];
   <section class="space-y-6">
     <div class="flex items-center justify-between">
       <h3 class="font-display italic font-black text-2xl lg:text-3xl ">Backend</h3>
-      <a href="#" class="btn btn-sm btn-ghost border-2 border-black rounded-none shadow-neo-sm">Ver todos <i data-lucide="arrow-right"></i></a>
+      <a href="<?= BASE_URL ?>pages/coursesPublic.php" class="btn btn-sm btn-ghost border-2 border-black rounded-none shadow-neo-sm">Ver todos <i data-lucide="arrow-right"></i></a>
     </div>
 
     <div class="carousel carousel-center w-full space-x-4 p-4 bg-base-200 rounded-none border-3 border-black">

@@ -26,7 +26,7 @@ $userRole = $_SESSION['user']['role'];
 $style = $rolStyles[$userRole] ?? $rolStyles['student'];
 ?>
 
-<div class="card w-full min-h-screen bg-base-300">
+<div class="card w-full rounded-none min-h-screen bg-base-300">
   <div class="card-body bg-base-300">
     <!-- Header -->
     <div class="flex items-center justify-between mb-6">

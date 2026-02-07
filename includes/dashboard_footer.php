@@ -8,7 +8,7 @@
           <!-- Sidebar content here -->
           <div class="w-full flex is-drawer-close:justify-center is-drawer-open:justify-start px-2 py-1 is-drawer-close:tooltip is-drawer-close:tooltip-right " data-tip="Lugo Tech">
             <div class="py-3 px-1.5 flex items-center gap-2">
-              <img src="<?php echo BASE_URL; ?>assets/images/logo.png" alt="Your Company" class="size-5" />
+              <img src="<?php echo BASE_URL; ?>assets/img/logo.png" alt="Your Company" class="size-5" />
               <span class="is-drawer-close:hidden font-display font-semibold">Lugo Tech</span>
             </div>
           </div>
@@ -52,18 +52,18 @@
             <?php endif; ?>
 
             <!-- List item -->
-            <li>
+            <!-- <li>
               <a href="#" class="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Settings">
-                <!-- Settings icon -->
 
                 <i data-lucide="settings-2" class="my-1.5 inline-block size-5 "></i>
                 <span class="is-drawer-close:hidden">Settings</span>
               </a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
       </div>
+      <script src="<?php echo BASE_URL; ?>assets/js/utils.js"></script>
       <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
       <script>
         // Inicializar iconos de Lucide

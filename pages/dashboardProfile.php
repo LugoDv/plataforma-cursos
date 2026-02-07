@@ -8,6 +8,11 @@ $countCourses = $enrollmentDao->coutCursesByStudent($_SESSION['user']['id']);
 
 // Indicar que viene del dashboard
 $profile_source = 'dashboard';
+?>
 
-require_once '../includes/profile.php';
-require_once '../includes/dashboard_footer.php';
+<main class="max-w-7xl mx-auto px-6 lg:px-20 py-16 lg:py-8">
+
+  <?php require_once '../includes/profile.php'; ?>
+</main>
+
+<?php require_once '../includes/dashboard_footer.php'; ?>

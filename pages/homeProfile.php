@@ -9,5 +9,14 @@ $countCourses = $enrollmentDao->coutCursesByStudent($_SESSION['user']['id']);
 // Indicar que viene del layout público
 $profile_source = 'public';
 
-require_once '../includes/profile.php';
-require_once '../includes/footer.php';
+
+?>
+
+
+
+<main class="max-w-7xl mx-auto px-6 lg:px-20 py-16 lg:py-8">
+
+  <?php require_once '../includes/profile.php'; ?>
+</main>
+
+<?php require_once '../includes/footer.php'; ?>

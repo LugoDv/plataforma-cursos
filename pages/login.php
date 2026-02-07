@@ -21,9 +21,12 @@ require_once __DIR__ . '/../includes/config.php';
       <div class="card-body p-6">
         <div class="sm:mx-auto sm:w-full sm:max-w-sm">
           <div class="flex justify-center mb-4">
-            <div class="p-3 bg-primary border-3 border-black shadow-neo-sm hover:-translate-y-1 hover:-translate-x-1 hover:shadow-neo transition-all duration-300">
-              <i data-lucide="graduation-cap" class="w-12 h-12 stroke-1"></i>
-            </div>
+            <a href="<?= BASE_URL ?>index.php">
+              <div class="p-3 bg-primary border-3 border-black shadow-neo-sm hover:-translate-y-1 hover:-translate-x-1 hover:shadow-neo transition-all duration-300">
+                <i data-lucide="graduation-cap" class="w-12 h-12 stroke-1"></i>
+
+              </div>
+            </a>
           </div>
 
           <h2 class="mt-3 text-center text-3xl font-black font-display uppercase italic tracking-tighter">Lugo Tech</h2>
@@ -74,6 +77,8 @@ require_once __DIR__ . '/../includes/config.php';
     </div>
   </div>
 
+
+  <script src="<?php echo BASE_URL; ?>assets/js/utils.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
     lucide.createIcons();
